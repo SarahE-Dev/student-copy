@@ -24,7 +24,7 @@ app.delete('/api/notes/delete-note/:id', NoteController.deleteNote);
 
 app.get('/api/notes/get-note-by-id/:id', NoteController.getNoteById);
 
-
+// make an update path at /api/notes/update-note/:id
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)

@@ -45,7 +45,7 @@ async function deleteNote(req, res) {
   }
 }
 
-
+// make and update function and export it
 
 module.exports = {
   getAllNotes,
