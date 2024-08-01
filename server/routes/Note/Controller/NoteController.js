@@ -45,6 +45,8 @@ async function deleteNote(req, res) {
   }
 }
 
+
+
 module.exports = {
   getAllNotes,
   getNoteById,

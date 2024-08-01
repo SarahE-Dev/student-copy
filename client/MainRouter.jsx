@@ -7,10 +7,6 @@ import Note from './src/components/Note'
 
 export default function MainRouter() {
     const [notesArray, setNotesArray] = useState([])
-    const onEdit = async (id, title, content) => {
-      
-        
-    }
     const onAdd = async (title, content) => {
         try {
             const response = await axios.post('http://localhost:3000/api/notes/create-note', {title, content})
@@ -31,6 +27,9 @@ export default function MainRouter() {
         }
         
     }
+    useEffect(() => {
+        getNotes()
+    }, [])
     const onDelete = async (id) => {
         try {
             const response = await axios.delete(`http://localhost:3000/api/notes/delete-note/${id}`)
@@ -51,13 +50,9 @@ export default function MainRouter() {
         }
         
     }
-    useEffect(() => {
-        getNotes()
-    }, [])
-    const editProps = {
-        onEdit,
-        notesArray
-    }
+    // make an onEdit function
+    
+    // make a new object for the edit props
     const addProps = {
         onAdd,
     }
@@ -72,7 +67,7 @@ export default function MainRouter() {
         <Routes>
             <Route path="/" element={<Home {...homeProps} />} />
             <Route path="/form" element={<Form {...addProps} />} />
-            
+            {/* make a path for edit and add props */}
         </Routes>
     </Router>
   )
