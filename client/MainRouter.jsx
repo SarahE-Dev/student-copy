@@ -59,7 +59,7 @@ export default function MainRouter() {
     const homeProps = {
         notesArray,
         onDelete,
-        onEdit,
+        // add onEdit function
         getNotes,
     }
   return (
