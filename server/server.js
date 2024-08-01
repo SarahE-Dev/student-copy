@@ -14,7 +14,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/presentation-project')
 .then(() => console.log('Connected to MongoDB'))
 .catch((err) => console.log(err));
 
-
+// if time make note router and hook up
 
 app.get('/api/notes/get-all-notes', NoteController.getAllNotes);
 
